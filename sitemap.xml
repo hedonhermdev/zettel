@@ -3,23 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hedonhermdev.github.io/notes/categories.html</loc>
+    <loc>//hedonhermdev.github.io/zettel/categories.html</loc>
   </url>
   
   <url>
-    <loc>https://hedonhermdev.github.io/notes/hello-world.html</loc>
+    <loc>//hedonhermdev.github.io/zettel/hello-world.html</loc>
   </url>
   
   <url>
-    <loc>https://hedonhermdev.github.io/notes/how-to-zettel.html</loc>
+    <loc>//hedonhermdev.github.io/zettel/how-to-zettel.html</loc>
   </url>
   
   <url>
-    <loc>https://hedonhermdev.github.io/notes/</loc>
+    <loc>//hedonhermdev.github.io/zettel/</loc>
   </url>
   
   <url>
-    <loc>https://hedonhermdev.github.io/notes/tags.html</loc>
+    <loc>//hedonhermdev.github.io/zettel/tags.html</loc>
   </url>
   
 </urlset>

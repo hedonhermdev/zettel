@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tirth&#39;s Zettelkaasten</title>
-    <link>https://hedonhermdev.github.io/notes/tags.html</link>
+    <link>//hedonhermdev.github.io/zettel/tags.html</link>
     <description>Recent content in Tags on Tirth&#39;s Zettelkaasten</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-EN</language><atom:link href="https://hedonhermdev.github.io/notes/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-EN</language><atom:link href="//hedonhermdev.github.io/zettel/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
