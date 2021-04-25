@@ -15,6 +15,57 @@
     </item>
     
     <item>
+      <title></title>
+      <link>//hedonhermdev.github.io/zettel/vim/autocmds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/vim/autocmds/</guid>
+      <description>Autocommands in Vim Autocommands are a powerful way of executing functions/commands in Vim when a certain event occurs. Following are a few examples on how to use autocommands to automate common tasks.
+Spellcheck only for Markdown Files Spellcheck can be annoying while writing code but can be useful while writing markdown stuff.
+autocmd filetype markdown setlocal spellReuse the same Run Key Depending on the File Type Suppose you want to execute the current file(script) in a floaterm with .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//hedonhermdev.github.io/zettel/vim/vimrc-for-servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/vim/vimrc-for-servers/</guid>
+      <description>A Minimal Vimrc &amp;hellip;with keybindings and sensible defaults.
+let g:mapleader = &amp;#34;,&amp;#34;set mouse=a &amp;#34; Enable mouse supportset title &amp;#34; Set title of terminal window to the current file namesyntax enable &amp;#34; Enable syntax highlightingset nohidden &amp;#34; Disable hidden buffersset wrap &amp;#34; Wrap long linesset linebreak &amp;#34; Dont break words while wrapping linesset encoding=utf-8 &amp;#34; Write files in UTF-8 encodingset fileencoding=utf-8set number &amp;#34; Show line number.set relativenumber &amp;#34; Show relative line numberset t_Co=256 &amp;#34; Use all 256 colorsset lazyredraw &amp;#34; Redraw only when neededset cursorline &amp;#34; Highlight the current lineset noshowmode &amp;#34; Airline shows the current mode so we dont need to see -- INSERT --- anymore&amp;#34; Tab == 4 spacesset tabstop=4set softtabstop=4set shiftwidth=4set expandtabset smarttabset autoindent&amp;#34; Searchingset incsearch &amp;#34; Start searching on character pressset hlsearch &amp;#34; Highlight matched charactersset ignorecase &amp;#34; Ignore case when searching with lowercase charactersset smartcase &amp;#34; Do not ignore case when searching with mixed charaters&amp;#34; Code foldingset foldlevelstart=5set foldnestmax=3set foldenable&amp;#34; Turn of swap filesset noswapfileset nobackupset nowb&amp;#34; Highlight trailing spaceshighlight RedundantSpaces ctermbg=red guibg=redmatch RedundantSpaces /\s\+$/&amp;#34; KEYBINDINGS&amp;#34; I hate &amp;lt;ESC&amp;gt;inoremap jk &amp;lt;esc&amp;gt;&amp;#34; Move through wrapped linesnnoremap j gjnnoremap k gk&amp;#34; Better window navigationnnoremap &amp;lt;C-J&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;C-J&amp;gt;nnoremap &amp;lt;C-K&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;C-K&amp;gt;nnoremap &amp;lt;C-L&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;C-L&amp;gt;nnoremap &amp;lt;C-H&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;C-H&amp;gt;&amp;#34; Use alt + hnoize windowsnnoremap &amp;lt;M-j&amp;gt; :resize -2&amp;lt;CR&amp;gt;nnoremap &amp;lt;M-k&amp;gt; :resize +2&amp;lt;CR&amp;gt;nnoremap &amp;lt;M-h&amp;gt; :vertical resize -2&amp;lt;CR&amp;gt;nnoremap &amp;lt;M-l&amp;gt; :vertical resize +2&amp;lt;CR&amp;gt;0&amp;#34; B for the beginning and E for the end of a linennoremap B ^nnoremap E $nnoremap $ &amp;lt;nop&amp;gt;nnoremap ^ &amp;lt;nop&amp;gt;c</description>
+    </item>
+    
+    <item>
+      <title>Error Handling in Rust</title>
+      <link>//hedonhermdev.github.io/zettel/git/error-handling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/git/error-handling/</guid>
+      <description>Better Error Handling in Rust If you have written any Rust, you may have noted how the above code uses Result&amp;lt;T&amp;gt; instead of Result&amp;lt;T, E&amp;gt;. This is because we have used a crate called anyhow.rs. Consider this function:
+pub fn write_blob(self) { let blob_path = self.get_path(); create_dir_all(blob_path.parent().unwrap()).unwrap(); let mut file = File::create(blob_path).unwrap(); file.write_all(&amp;amp;self.content).unwrap(); file.flush().unwrap(); } There are a number of ways this can fail. However, we don&amp;rsquo;t care a lot about the exact type of each error.</description>
+    </item>
+    
+    <item>
+      <title>Git CLI in Rust</title>
+      <link>//hedonhermdev.github.io/zettel/git/cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/git/cli/</guid>
+      <description>CLI Definition in Rust Writing CLIs in Rust is an absolute pleasure. Using a crate like structopt, you can define the structure of your CLI and it handles cleaning the input and converting it to an appropriate type.
+#[derive(Debug, StructOpt)] #[structopt(name = &amp;#34;TGit&amp;#34;, about = &amp;#34;HedonHermDev&amp;#39;s implementation of Git&amp;#34;)] pub enum CLI { #[structopt( name = &amp;#34;init&amp;#34;, about = &amp;#34;Initialize an empty git repository&amp;#34;)] Init { git_dir: Option&amp;lt;PathBuf&amp;gt; }, #[structopt(name = &amp;#34;cat-file&amp;#34;, about = &amp;#34;Cat the contents of a git object&amp;#34;)] CatFile { #[structopt( name = &amp;#34;pretty_print&amp;#34;, short = &amp;#34;p&amp;#34;, about = &amp;#34;Pretty print the contents&amp;#34;)] pretty_print: bool, #[structopt(name = &amp;#34;OBJECT SHA&amp;#34;)] object_sha: String, }, // -- snip -- } impl CLI { pub async fn run() -&amp;gt; Result&amp;lt;()&amp;gt; { let args: Self = Self::from_args(); match args { CLI::Init { git_dir } =&amp;gt; commands::init(git_dir).</description>
+    </item>
+    
+    <item>
+      <title>Git Implementation in Rust</title>
+      <link>//hedonhermdev.github.io/zettel/git/implementation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/git/implementation/</guid>
+      <description>Git Implementation in Rust Since all three types of objects have some common behaviour that only differs in its implementation, we can easily define a trait Object that defines each of these methods.
+#[async_trait] pub trait Object { async fn from_object_sha(object_sha: String) -&amp;gt; Result&amp;lt;Self&amp;gt; where Self: Sized; fn sha1_hash(&amp;amp;self) -&amp;gt; [u8; 20]; fn write_data(&amp;amp;self) -&amp;gt; &amp;amp;Vec&amp;lt;u8&amp;gt;; async fn write(&amp;amp;self) -&amp;gt; Result&amp;lt;PathBuf&amp;gt; { let mut path = PathBuf::from(&amp;#34;.git/objects&amp;#34;); let blob_hex = hex::encode(self.</description>
+    </item>
+    
+    <item>
       <title>Homegrown Autodeployment</title>
       <link>//hedonhermdev.github.io/zettel/devops/homegrown-autodeployment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -38,6 +89,15 @@ There are plenty of docs explaining the zettelkasten method so I&amp;rsquo;m jus
     </item>
     
     <item>
+      <title>Internals of Git Object Storage</title>
+      <link>//hedonhermdev.github.io/zettel/git/internal-objects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/git/internal-objects/</guid>
+      <description>Internals of Git Object Storage To understand the implementation further, you will need a rough idea of how Git stores its data. Here&amp;rsquo;s a brief introduction to the same. Everything about Git is stored inside a directory called the gitdir aka .git. Example contents of the .git directory Think of Git like a database. Git stores its data in the form of Objects. There are three types of Git objects: Blob, Tree, and Commit.</description>
+    </item>
+    
+    <item>
       <title>Setting up your own Git Server</title>
       <link>//hedonhermdev.github.io/zettel/devops/git-server-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -46,6 +106,17 @@ There are plenty of docs explaining the zettelkasten method so I&amp;rsquo;m jus
       <description>Setting up your own Git Server Setting up a git server on your VPS. Useful for small projects and the likes.
 $ adduser git $ cd ~ $ mkdir project-name &amp;amp;&amp;amp; cd project-name $ git init --bare .git Now setup a post-receive hook to checkout to your preferred branch whenever you push to the remote.
 $ cd .git/hooks/ $ touch post-receive $ echo &amp;#34;git git-dir=/home/git/project-name/.git work-tree=/home/git/project-name/ checkout deploy -f Replace the values of git-dir and work-tree with the appropriate directories.</description>
+    </item>
+    
+    <item>
+      <title>Writing Git in Rust</title>
+      <link>//hedonhermdev.github.io/zettel/git/git-in-rust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/git/git-in-rust/</guid>
+      <description>Writing Git in Rust Notes around the implementation of a small part of Git in Rust. Full implementation in this repository.
+Note that most of the implementation&amp;rsquo;s details will be snipped. If you want to see the full implementation and try it out on your machine, check out the repository.
+Structuring the Project The challenge proceeded in steps and each step was about implementing what they call &amp;ldquo;plumbing commands&amp;rdquo; of Git.</description>
     </item>
     
   </channel>

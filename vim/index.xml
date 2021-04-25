@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on HedonHermDev</title>
+    <link>//hedonhermdev.github.io/zettel/vim/</link>
+    <description>Recent content in Vim on HedonHermDev</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="//hedonhermdev.github.io/zettel/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>//hedonhermdev.github.io/zettel/vim/autocmds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/vim/autocmds/</guid>
+      <description>Autocommands in Vim Autocommands are a powerful way of executing functions/commands in Vim when a certain event occurs. Following are a few examples on how to use autocommands to automate common tasks.
+Spellcheck only for Markdown Files Spellcheck can be annoying while writing code but can be useful while writing markdown stuff.
+autocmd filetype markdown setlocal spellReuse the same Run Key Depending on the File Type Suppose you want to execute the current file(script) in a floaterm with .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//hedonhermdev.github.io/zettel/vim/vimrc-for-servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/vim/vimrc-for-servers/</guid>
+      <description>A Minimal Vimrc &amp;hellip;with keybindings and sensible defaults.
+let g:mapleader = &amp;#34;,&amp;#34;set mouse=a &amp;#34; Enable mouse supportset title &amp;#34; Set title of terminal window to the current file namesyntax enable &amp;#34; Enable syntax highlightingset nohidden &amp;#34; Disable hidden buffersset wrap &amp;#34; Wrap long linesset linebreak &amp;#34; Dont break words while wrapping linesset encoding=utf-8 &amp;#34; Write files in UTF-8 encodingset fileencoding=utf-8set number &amp;#34; Show line number.set relativenumber &amp;#34; Show relative line numberset t_Co=256 &amp;#34; Use all 256 colorsset lazyredraw &amp;#34; Redraw only when neededset cursorline &amp;#34; Highlight the current lineset noshowmode &amp;#34; Airline shows the current mode so we dont need to see -- INSERT --- anymore&amp;#34; Tab == 4 spacesset tabstop=4set softtabstop=4set shiftwidth=4set expandtabset smarttabset autoindent&amp;#34; Searchingset incsearch &amp;#34; Start searching on character pressset hlsearch &amp;#34; Highlight matched charactersset ignorecase &amp;#34; Ignore case when searching with lowercase charactersset smartcase &amp;#34; Do not ignore case when searching with mixed charaters&amp;#34; Code foldingset foldlevelstart=5set foldnestmax=3set foldenable&amp;#34; Turn of swap filesset noswapfileset nobackupset nowb&amp;#34; Highlight trailing spaceshighlight RedundantSpaces ctermbg=red guibg=redmatch RedundantSpaces /\s\+$/&amp;#34; KEYBINDINGS&amp;#34; I hate &amp;lt;ESC&amp;gt;inoremap jk &amp;lt;esc&amp;gt;&amp;#34; Move through wrapped linesnnoremap j gjnnoremap k gk&amp;#34; Better window navigationnnoremap &amp;lt;C-J&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;C-J&amp;gt;nnoremap &amp;lt;C-K&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;C-K&amp;gt;nnoremap &amp;lt;C-L&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;C-L&amp;gt;nnoremap &amp;lt;C-H&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;C-H&amp;gt;&amp;#34; Use alt + hnoize windowsnnoremap &amp;lt;M-j&amp;gt; :resize -2&amp;lt;CR&amp;gt;nnoremap &amp;lt;M-k&amp;gt; :resize +2&amp;lt;CR&amp;gt;nnoremap &amp;lt;M-h&amp;gt; :vertical resize -2&amp;lt;CR&amp;gt;nnoremap &amp;lt;M-l&amp;gt; :vertical resize +2&amp;lt;CR&amp;gt;0&amp;#34; B for the beginning and E for the end of a linennoremap B ^nnoremap E $nnoremap $ &amp;lt;nop&amp;gt;nnoremap ^ &amp;lt;nop&amp;gt;c</description>
+    </item>
+    
+  </channel>
+</rss>

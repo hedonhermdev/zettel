@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on HedonHermDev</title>
+    <link>//hedonhermdev.github.io/zettel/git/</link>
+    <description>Recent content in Git on HedonHermDev</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="//hedonhermdev.github.io/zettel/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Error Handling in Rust</title>
+      <link>//hedonhermdev.github.io/zettel/git/error-handling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/git/error-handling/</guid>
+      <description>Better Error Handling in Rust If you have written any Rust, you may have noted how the above code uses Result&amp;lt;T&amp;gt; instead of Result&amp;lt;T, E&amp;gt;. This is because we have used a crate called anyhow.rs. Consider this function:
+pub fn write_blob(self) { let blob_path = self.get_path(); create_dir_all(blob_path.parent().unwrap()).unwrap(); let mut file = File::create(blob_path).unwrap(); file.write_all(&amp;amp;self.content).unwrap(); file.flush().unwrap(); } There are a number of ways this can fail. However, we don&amp;rsquo;t care a lot about the exact type of each error.</description>
+    </item>
+    
+    <item>
+      <title>Git CLI in Rust</title>
+      <link>//hedonhermdev.github.io/zettel/git/cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/git/cli/</guid>
+      <description>CLI Definition in Rust Writing CLIs in Rust is an absolute pleasure. Using a crate like structopt, you can define the structure of your CLI and it handles cleaning the input and converting it to an appropriate type.
+#[derive(Debug, StructOpt)] #[structopt(name = &amp;#34;TGit&amp;#34;, about = &amp;#34;HedonHermDev&amp;#39;s implementation of Git&amp;#34;)] pub enum CLI { #[structopt( name = &amp;#34;init&amp;#34;, about = &amp;#34;Initialize an empty git repository&amp;#34;)] Init { git_dir: Option&amp;lt;PathBuf&amp;gt; }, #[structopt(name = &amp;#34;cat-file&amp;#34;, about = &amp;#34;Cat the contents of a git object&amp;#34;)] CatFile { #[structopt( name = &amp;#34;pretty_print&amp;#34;, short = &amp;#34;p&amp;#34;, about = &amp;#34;Pretty print the contents&amp;#34;)] pretty_print: bool, #[structopt(name = &amp;#34;OBJECT SHA&amp;#34;)] object_sha: String, }, // -- snip -- } impl CLI { pub async fn run() -&amp;gt; Result&amp;lt;()&amp;gt; { let args: Self = Self::from_args(); match args { CLI::Init { git_dir } =&amp;gt; commands::init(git_dir).</description>
+    </item>
+    
+    <item>
+      <title>Git Implementation in Rust</title>
+      <link>//hedonhermdev.github.io/zettel/git/implementation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/git/implementation/</guid>
+      <description>Git Implementation in Rust Since all three types of objects have some common behaviour that only differs in its implementation, we can easily define a trait Object that defines each of these methods.
+#[async_trait] pub trait Object { async fn from_object_sha(object_sha: String) -&amp;gt; Result&amp;lt;Self&amp;gt; where Self: Sized; fn sha1_hash(&amp;amp;self) -&amp;gt; [u8; 20]; fn write_data(&amp;amp;self) -&amp;gt; &amp;amp;Vec&amp;lt;u8&amp;gt;; async fn write(&amp;amp;self) -&amp;gt; Result&amp;lt;PathBuf&amp;gt; { let mut path = PathBuf::from(&amp;#34;.git/objects&amp;#34;); let blob_hex = hex::encode(self.</description>
+    </item>
+    
+    <item>
+      <title>Internals of Git Object Storage</title>
+      <link>//hedonhermdev.github.io/zettel/git/internal-objects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/git/internal-objects/</guid>
+      <description>Internals of Git Object Storage To understand the implementation further, you will need a rough idea of how Git stores its data. Here&amp;rsquo;s a brief introduction to the same. Everything about Git is stored inside a directory called the gitdir aka .git. Example contents of the .git directory Think of Git like a database. Git stores its data in the form of Objects. There are three types of Git objects: Blob, Tree, and Commit.</description>
+    </item>
+    
+    <item>
+      <title>Writing Git in Rust</title>
+      <link>//hedonhermdev.github.io/zettel/git/git-in-rust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//hedonhermdev.github.io/zettel/git/git-in-rust/</guid>
+      <description>Writing Git in Rust Notes around the implementation of a small part of Git in Rust. Full implementation in this repository.
+Note that most of the implementation&amp;rsquo;s details will be snipped. If you want to see the full implementation and try it out on your machine, check out the repository.
+Structuring the Project The challenge proceeded in steps and each step was about implementing what they call &amp;ldquo;plumbing commands&amp;rdquo; of Git.</description>
+    </item>
+    
+  </channel>
+</rss>

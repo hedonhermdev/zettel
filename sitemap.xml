@@ -3,12 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>//hedonhermdev.github.io/zettel/sdns/</loc>
-    <priority>0</priority>
+    <loc>//hedonhermdev.github.io/zettel/</loc>
   </url>
   
   <url>
     <loc>//hedonhermdev.github.io/zettel/sdns/p4-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>//hedonhermdev.github.io/zettel/vim/autocmds/</loc>
+  </url>
+  
+  <url>
+    <loc>//hedonhermdev.github.io/zettel/vim/vimrc-for-servers/</loc>
   </url>
   
   <url>
@@ -20,6 +27,22 @@
   </url>
   
   <url>
+    <loc>//hedonhermdev.github.io/zettel/git/error-handling/</loc>
+  </url>
+  
+  <url>
+    <loc>//hedonhermdev.github.io/zettel/git/</loc>
+  </url>
+  
+  <url>
+    <loc>//hedonhermdev.github.io/zettel/git/cli/</loc>
+  </url>
+  
+  <url>
+    <loc>//hedonhermdev.github.io/zettel/git/implementation/</loc>
+  </url>
+  
+  <url>
     <loc>//hedonhermdev.github.io/zettel/devops/homegrown-autodeployment/</loc>
   </url>
   
@@ -28,7 +51,7 @@
   </url>
   
   <url>
-    <loc>//hedonhermdev.github.io/zettel/</loc>
+    <loc>//hedonhermdev.github.io/zettel/git/internal-objects/</loc>
   </url>
   
   <url>
@@ -36,7 +59,19 @@
   </url>
   
   <url>
+    <loc>//hedonhermdev.github.io/zettel/sdns/</loc>
+  </url>
+  
+  <url>
     <loc>//hedonhermdev.github.io/zettel/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>//hedonhermdev.github.io/zettel/vim/</loc>
+  </url>
+  
+  <url>
+    <loc>//hedonhermdev.github.io/zettel/git/git-in-rust/</loc>
   </url>
   
 </urlset>
