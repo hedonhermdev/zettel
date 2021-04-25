@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HedonHermDev</title>
+    <link>//localhost:1313/zettel/sdns/</link>
+    <description>Recent content on HedonHermDev</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="//localhost:1313/zettel/sdns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>//localhost:1313/zettel/sdns/p4-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zettel/sdns/p4-notes/</guid>
+      <description>Notes for P4 A P4 program is a .p4 file that runs on a switch. A switch is basically a device that connects multiple devices (or hosts) on a network. P4 was made to run on &amp;ldquo;programmable switches&amp;rdquo;. Programmable switches use a &amp;ldquo;Protocol Independent Switch Architecture&amp;rdquo;. PISA allows programmers to select or even invent a protocol in their switch by just writing a P4 program that will run on the switches in their network.</description>
+    </item>
+    
+  </channel>
+</rss>

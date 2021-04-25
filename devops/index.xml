@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Master Note on HedonHermDev</title>
-    <link>//localhost:1313/zettel/</link>
-    <description>Recent content in Master Note on HedonHermDev</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="//localhost:1313/zettel/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>//localhost:1313/zettel/sdns/p4-notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/zettel/sdns/p4-notes/</guid>
-      <description>Notes for P4 A P4 program is a .p4 file that runs on a switch. A switch is basically a device that connects multiple devices (or hosts) on a network. P4 was made to run on &amp;ldquo;programmable switches&amp;rdquo;. Programmable switches use a &amp;ldquo;Protocol Independent Switch Architecture&amp;rdquo;. PISA allows programmers to select or even invent a protocol in their switch by just writing a P4 program that will run on the switches in their network.</description>
-    </item>
-    
+    <title>DevOps Notes on HedonHermDev</title>
+    <link>//localhost:1313/zettel/devops/</link>
+    <description>Recent content in DevOps Notes on HedonHermDev</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="//localhost:1313/zettel/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Homegrown Autodeployment</title>
       <link>//localhost:1313/zettel/devops/homegrown-autodeployment/</link>
@@ -23,18 +14,6 @@
       <description>Homegrown Solution for AutoDeployment on your prod server This note explains setting up continuous deployment on your [[devops/git-server-setup]].
 This is a post-receive hook I use to deploy whenever I push without having to ssh to the server
 #!/bin/bash  WORK_TREE=/root/marketplace COMPOSE_FILE=$WORK_TREE/docker-compose.yml KEYCONFIG=$WORK_TREE/marketplace/keyconfig.py git --work-tree=$WORK_TREE --git-dir=$WORK_TREE/.git checkout deploy -f echo &amp;#34;Hello from prodserver&amp;#34; echo &amp;#34;Building docker containers...&amp;#34; if [ ! -f $COMPOSE_FILE ]; then echo &amp;#34;Compose file not found, are you sure you pushed it?</description>
-    </item>
-    
-    <item>
-      <title>How to Zettel</title>
-      <link>//localhost:1313/zettel/how-to-zettel/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/zettel/how-to-zettel/</guid>
-      <description>How to Zettel Notes on how what this is and how I (plan to) maintain my Zettelkasten. Very meta.
-What is the Zettelkasten method? Zettelkasten method is basically a way of maintaining notes with connections between them. Kind of like a graph of atomic notes.
-There are plenty of docs explaining the zettelkasten method so I&amp;rsquo;m just gonna link to them here.
-Tools to create your own Zettelkasten Note taking apps like:</description>
     </item>
     
     <item>
