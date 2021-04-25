@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevOps Notes on HedonHermDev</title>
-    <link>//localhost:1313/zettel/devops/</link>
+    <link>//hedonhermdev.github.io/zettel/devops/</link>
     <description>Recent content in DevOps Notes on HedonHermDev</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="//localhost:1313/zettel/devops/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="//hedonhermdev.github.io/zettel/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Homegrown Autodeployment</title>
-      <link>//localhost:1313/zettel/devops/homegrown-autodeployment/</link>
+      <link>//hedonhermdev.github.io/zettel/devops/homegrown-autodeployment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zettel/devops/homegrown-autodeployment/</guid>
+      <guid>//hedonhermdev.github.io/zettel/devops/homegrown-autodeployment/</guid>
       <description>Homegrown Solution for AutoDeployment on your prod server This note explains setting up continuous deployment on your [[devops/git-server-setup]].
 This is a post-receive hook I use to deploy whenever I push without having to ssh to the server
 #!/bin/bash  WORK_TREE=/root/marketplace COMPOSE_FILE=$WORK_TREE/docker-compose.yml KEYCONFIG=$WORK_TREE/marketplace/keyconfig.py git --work-tree=$WORK_TREE --git-dir=$WORK_TREE/.git checkout deploy -f echo &amp;#34;Hello from prodserver&amp;#34; echo &amp;#34;Building docker containers...&amp;#34; if [ ! -f $COMPOSE_FILE ]; then echo &amp;#34;Compose file not found, are you sure you pushed it?</description>
@@ -18,10 +18,10 @@ This is a post-receive hook I use to deploy whenever I push without having to ss
     
     <item>
       <title>Setting up your own Git Server</title>
-      <link>//localhost:1313/zettel/devops/git-server-setup/</link>
+      <link>//hedonhermdev.github.io/zettel/devops/git-server-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/zettel/devops/git-server-setup/</guid>
+      <guid>//hedonhermdev.github.io/zettel/devops/git-server-setup/</guid>
       <description>Setting up your own Git Server Setting up a git server on your VPS. Useful for small projects and the likes.
 $ adduser git $ cd ~ $ mkdir project-name &amp;amp;&amp;amp; cd project-name $ git init --bare .git Now setup a post-receive hook to checkout to your preferred branch whenever you push to the remote.
 $ cd .git/hooks/ $ touch post-receive $ echo &amp;#34;git git-dir=/home/git/project-name/.git work-tree=/home/git/project-name/ checkout deploy -f Replace the values of git-dir and work-tree with the appropriate directories.</description>
